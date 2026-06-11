@@ -20,7 +20,7 @@ export const PubCard = ({ pub, title, names, pubAbbr, links, image }) => {
           }}
           color="blue"
         >
-          <img src={`${process.env.PUBLIC_URL}${image}`} width={200} height={150} />
+          <img src={image} width={200} height={150} />
         </Badge.Ribbon>
       </div>
       <div style={{ margin: 15 }}>

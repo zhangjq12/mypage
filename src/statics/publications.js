@@ -7,6 +7,6 @@ export const PUBLICATIONS = [
     links: {
       pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/39404"
     },
-    image: "/signal_enhancement_aaai_2026.png",
+    image: "signal_enhancement_aaai_2026.png",
   }
 ]
