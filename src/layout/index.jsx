@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   DesktopOutlined,
   FileOutlined,
@@ -30,6 +30,14 @@ export const LayoutMain = ({ i18n, setI18n }) => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
+  const topRef = useRef(null);
+
+  const [targetOffset, setTargetOffset] = useState();
+
+  useEffect(() => {
+    setTargetOffset(topRef.current?.clientHeight);
+  }, []);
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sider style={siderStyle} width={500} theme="light">
@@ -54,7 +62,11 @@ export const LayoutMain = ({ i18n, setI18n }) => {
         }}
       >
         <Header
+          ref={topRef}
           style={{
+            position: "sticky",
+            top: 0,
+            zIndex: 1,
             padding: 0,
             background: colorBgContainer,
             display: "flex",
@@ -63,6 +75,7 @@ export const LayoutMain = ({ i18n, setI18n }) => {
         >
           <Anchor
             direction="horizontal"
+            targetOffset={targetOffset}
             items={[
               {
                 key: "aboutme",

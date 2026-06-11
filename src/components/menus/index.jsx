@@ -26,7 +26,7 @@ export const Menus = () => {
           zjq532_kobe
         </Button>
       </div>
-      <div style={{ marginTop: 10 }}>
+      {/* <div style={{ marginTop: 10 }}>
         <Button
           type="default"
           icon={<GithubFilled />}
@@ -36,7 +36,7 @@ export const Menus = () => {
         >
           zhangjq12
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
