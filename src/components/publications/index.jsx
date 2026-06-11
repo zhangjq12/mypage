@@ -16,6 +16,7 @@ export const Publications = ({ i18n }) => {
             image={pubs.image}
             links={pubs.links}
             pubAbbr={pubs.pubAbbr}
+            rating={pubs.rating}
           />
         );
       })}
